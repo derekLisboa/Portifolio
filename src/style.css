@@ -121,3 +121,57 @@ textarea {
   color: #eee;
   border: 1px solid #444;
 }
+
+.intro-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 20px;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+
+.intro-text {
+  flex: 1 1 300px;
+  max-width: 600px;
+  text-align: left;
+}
+
+.intro-text h1 {
+  margin-bottom: 20px;
+}
+
+.intro-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: inherit;
+}
+
+.intro-image {
+  flex: 1 1 300px;
+  max-width: 400px;
+}
+
+.intro-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  object-fit: cover;
+  max-height: 300px;
+}
+
+@media (max-width: 768px) {
+  .intro-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .intro-text, .intro-image {
+    max-width: 100%;
+  }
+
+  .intro-image img {
+    max-height: none;
+  }
+}

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import FadeInSection from "./FadeInSection"
 import './style.css'
 
 const App = () => {
@@ -46,33 +47,54 @@ const App = () => {
 
       <div className="container">
         <section id="inicio">
-          <h1>Meu Portfólio</h1>
-          <p>Bem-vindo ao meu site!</p>
+          <FadeInSection>
+            <div className="intro-container">
+              <div className="intro-text">
+                <h1>Meu Portfólio</h1>
+                <p>
+                  Olá! Sou [Seu Nome], um desenvolvedor apaixonado por criar soluções
+                  modernas, funcionais e bonitas. Aqui você pode conhecer meu trabalho e habilidades.
+                </p>
+              </div>
+              <div className="intro-image">
+                <img
+                  src="https://via.placeholder.com/400x300.png?text=Minha+Foto"
+                  alt="Minha foto"
+                />
+              </div>
+            </div>
+          </FadeInSection>
         </section>
 
         <section id="habilidades">
-          <h2>Habilidades</h2>
-          <ul>
-            <li>HTML, CSS, JavaScript</li>
-            <li>React, Node.js</li>
-            <li>Python, Django</li>
-          </ul>
+          <FadeInSection>
+            <h2>Habilidades</h2>
+            <ul>
+              <li>HTML, CSS, JavaScript</li>
+              <li>React, Node.js</li>
+              <li>Python, Django</li>
+            </ul>
+          </FadeInSection>
         </section>
 
         <section id="sobre">
-          <h2>Sobre</h2>
-          <p>Sou um desenvolvedor apaixonado por criar soluções funcionais e bonitas.</p>
+          <FadeInSection>
+            <h2>Sobre</h2>
+            <p>Sou um desenvolvedor apaixonado por criar soluções funcionais e bonitas.</p>
+          </FadeInSection>
         </section>
 
         <section>
           <h2>Contato</h2>
-          <form onSubmit={handleContato}>
-            <input name="nome" placeholder="Seu nome" required />
-            <input name="email" type="email" placeholder="Seu email" required />
-            <textarea name="mensagem" placeholder="Mensagem" required></textarea>
-            <button type="submit">Enviar</button>
-          </form>
-          <p>{mensagem}</p>
+          <FadeInSection>
+            <form onSubmit={handleContato}>
+              <input name="nome" placeholder="Seu nome" required />
+              <input name="email" type="email" placeholder="Seu email" required />
+              <textarea name="mensagem" placeholder="Mensagem" required></textarea>
+              <button type="submit">Enviar</button>
+            </form>
+            <p>{mensagem}</p>
+          </FadeInSection>
         </section>
       </div>
     </div>
