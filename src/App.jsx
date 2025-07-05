@@ -35,23 +35,33 @@ const App = () => {
 
   return (
     <div className={dark ? "dark" : ""}>
-      <div className="container">
-        <button onClick={() => setDark(!dark)}>🌙</button>
-        <h1>Meu Portfólio</h1>
+      <header className="navbar">
+        <nav className="nav-container">
+          <a href="#inicio" className="nav-item">Início</a>
+          <a href="#habilidades" className="nav-item">Habilidades</a>
+          <a href="#sobre" className="nav-item">Sobre</a>
+          <button onClick={() => setDark(!dark)} className="theme-button" aria-label="Alternar tema">🌙</button>
+        </nav>
+      </header>
 
-        <section>
-          <h2>Projetos</h2>
-          <div className="grid">
-            {projetos.map((p, i) => (
-              <div key={i} className="card">
-                <h3>{p.nome}</h3>
-                <p>{p.descricao}</p>
-                <a href={p.link} target="_blank" rel="noopener noreferrer">
-                  <button>Ver Projeto</button>
-                </a>
-              </div>
-            ))}
-          </div>
+      <div className="container">
+        <section id="inicio">
+          <h1>Meu Portfólio</h1>
+          <p>Bem-vindo ao meu site!</p>
+        </section>
+
+        <section id="habilidades">
+          <h2>Habilidades</h2>
+          <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>React, Node.js</li>
+            <li>Python, Django</li>
+          </ul>
+        </section>
+
+        <section id="sobre">
+          <h2>Sobre</h2>
+          <p>Sou um desenvolvedor apaixonado por criar soluções funcionais e bonitas.</p>
         </section>
 
         <section>
